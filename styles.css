@@ -20,6 +20,7 @@ body {
   align-items: center;
   background-color: #ffffff;
   padding: 20px;
+  margin-bottom: 15px;
   border-bottom: 2px solid #ccc;
   flex-wrap: wrap;
 }
@@ -47,6 +48,7 @@ body {
 
   text-align: start;
   font-size: 0.95em;
+
 }
 
 .profile-right a {
@@ -952,6 +954,7 @@ body {
 
   .profile-left {
     flex-direction: column;
+    
   }
 
   .name {
