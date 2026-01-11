@@ -262,6 +262,23 @@ body {
   gap: 30px;
 }
 
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;      /* stack image + text */
+    align-items: center;         /* center everything */
+    text-align: left;
+  }
+
+  .profile-image {
+    width: 180px;                /* smaller image for phones */
+    margin-bottom: 20px;
+  }
+
+  .bio {
+    width: 100%;
+  }
+}
+
 .profile-image {
   margin-top: 8%;
   width: 200px;
