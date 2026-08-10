@@ -44,8 +44,8 @@ body {
 }
 
 .profile-right {
-  /* display: flex; */
-
+  flex: 1 1 0%;
+  min-width: 0;
   text-align: start;
   font-size: 0.95em;
 
