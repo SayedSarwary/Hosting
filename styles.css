@@ -337,6 +337,13 @@ body {
   margin-bottom: 10px;
 }
 
+.affiliation-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  color: #0077cc;
+}
+
 .affiliation p {
   font-weight: bold;
 }
@@ -945,6 +952,83 @@ padding: 50px;
   text-align: left;
 }
 
+/* Media / Press page */
+.mediamain {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.media-intro {
+  color: #555;
+  max-width: 700px;
+  margin-bottom: 2rem;
+}
+
+.media-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.media-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.media-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.media-source {
+  background-color: #eef4fb;
+  color: #004080;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.media-year {
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.media-title {
+  font-size: 1.15rem;
+  color: #004080;
+  margin: 0 0 0.5rem 0;
+}
+
+.media-excerpt {
+  color: #444;
+  margin-bottom: 0.75rem;
+}
+
+.media-link {
+  color: #0077cc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.media-link:hover {
+  text-decoration: underline;
+}
+
 
 /* ---------- MOBILE FRIENDLY ADDITIONS ---------- */
 
@@ -1090,6 +1174,13 @@ body {
   .services-year,
   .community-year {
     align-self: flex-start;
+  }
+}
+
+/* Media page stack */
+@media (max-width: 768px) {
+  .media-card {
+    padding: 1.25rem;
   }
 }
 
