@@ -131,16 +131,35 @@ body {
 }
 
 
-/* Hero image */
+/* Hero image: one full-width, uncropped collage photo */
 .hero-image img {
   width: 100%;
   height: auto;
-  margin: 20px 0;
+  margin: 20px 0 0 0;
   border-radius: 8px;
+  display: block;
 }
 
-.mobile-awards{
-  display: none;
+/* Plain-text captions below the hero image, divided into 3 columns
+   aligned under each photo in the collage */
+.hero-image-captions {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.hero-image-captions p {
+  flex: 1 1 0%;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 8px 10px;
+  border-right: 1px solid #ddd;
+}
+
+.hero-image-captions p:last-child {
+  border-right: none;
 }
 
 /* Section buttons */
@@ -1048,6 +1067,22 @@ body {
 
 /* MOBILE RESPONSIVE FIXES */
 
+/* Stack hero image captions on narrow screens */
+@media (max-width: 600px) {
+  .hero-image-captions {
+    flex-direction: column;
+  }
+
+  .hero-image-captions p {
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .hero-image-captions p:last-child {
+    border-bottom: none;
+  }
+}
+
 /* Profile header column on mobile */
 @media (max-width: 768px) {
   .profile-header {
@@ -1075,53 +1110,6 @@ body {
   .profile-right {
     margin-top: 15px;
     text-align: left;
-  }
-}
-
-/* Hide hero image on mobile */
-@media (max-width: 768px) {
-  .hero-image {
-    display: none;
-  }
-
-  .mobile-awards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    margin: 20px 0;
-  }
-
-  .award-photo {
-    position: relative;
-    flex: 1 1 30%;
-    max-width: 31%;
-    border: 3px solid #ffffff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
-  }
-
-  .award-photo img {
-    display: block;
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-
-  .award-photo-caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.92);
-    color: #000;
-    font-size: 0.65rem;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1.2;
-    padding: 3px 4px;
   }
 }
 
