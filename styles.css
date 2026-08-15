@@ -19,9 +19,9 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-bottom: 2px solid #ccc;
+  padding: 20px 20px 30px 20px;
+  margin-bottom: 30px;
+  border-bottom: 3px solid #004080;
   flex-wrap: wrap;
 }
 
@@ -171,9 +171,10 @@ body {
 /* Downloads section */
 .downloads {
   display: flex;
-  justify-content:center;
-  gap: 200px;
-  margin-bottom: 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .downloads a {
