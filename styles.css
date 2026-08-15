@@ -17,7 +17,7 @@ body {
 .profile-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   background-color: #ffffff;
   padding: 20px;
   margin-bottom: 15px;
@@ -1085,15 +1085,42 @@ body {
 
   .mobile-awards {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
     margin: 20px 0;
   }
 
-  .mobile-awards img {
+  .award-photo {
+    position: relative;
+    flex: 1 1 30%;
+    max-width: 31%;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+  }
+
+  .award-photo img {
+    display: block;
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+
+  .award-photo-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.2;
+    padding: 3px 4px;
   }
 }
 
